@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Sign_in : Form
+    {
+         MySqlConnection mcon = new MySqlConnection("server=localhost;user id=root;database=akas");
+        MySqlCommand cmd = new MySqlCommand();
+    
+        public Sign_in()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+             MySqlDataAdapter sda = new MySqlDataAdapter ("INSERT INTO admin (id,name,phone_num,password) values('"+textBox1.Text + "','" + textBox2.Text +"','"+textBox3.Text+"','"+textBox4.Text+"')",mcon);
+
+            DataTable dt = new DataTable();
+            try
+            {
+                mcon.Open();
+                sda.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+                    MessageBox.Show("Login Successful");
+                }
+                else
+                    MessageBox.Show("");
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { mcon.Close(); };
+            //ExecuteQuery(q);
+        }
+              public void openCon()
+        {
+            if (mcon.State == ConnectionState.Closed)
+            {
+                mcon.Open();
+            }
+        }
+        public void closeCon()
+        {
+            if (mcon.State == ConnectionState.Open)
+            {
+                mcon.Close();
+            }
+        }
+
+       /* [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Security", "CA2100:Review SQL queries for security vulnerabilities")]*/
+        public void ExecuteQuery(string q)
+        {
+            try
+            {
+                openCon();
+                cmd = new MySqlCommand(q, mcon);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("query executed");
+                }
+                else
+                {
+                    MessageBox.Show("query not executed");
+                }
+
+
+            }
+            catch (Exception ak)
+            {
+                MessageBox.Show(ak.Message);
+            }
+            finally
+            {
+                closeCon();
+            }
+        }
+        }
+    }
