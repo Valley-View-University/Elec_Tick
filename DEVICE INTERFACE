@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1
             if (comboBox1.Text == "SDA") 
             {
                 total = fare - subfar;
-                MessageBox.Show("your fare is\t"+total);
+                MessageBox.Show("Your fare is\t"+total);
             }
             int newfare = 20;
             float exfare = 10;
@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
             if (comboBox1.Text == "Assemblies")
             {
                 sum = newfare - exfare;
-                MessageBox.Show("your fare is\t" + sum);
+                MessageBox.Show("Your fare is\t" + sum);
             }
             int nfare = 20;
             float exfar = 10;
@@ -74,6 +74,6 @@ namespace WindowsFormsApplication1
             if (comboBox1.Text == "Ritz First")
             {
                 tota = nfare - exfar;
-                MessageBox.Show("your fare is\t" + tota);
+                MessageBox.Show("Your fare is\t" + tota);
             }
      
