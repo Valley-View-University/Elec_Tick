@@ -1,0 +1,15 @@
+
+Start
+           Input destination
+         If you want to load
+              Admin login
+              Input id and password
+                        If id and password are valid
+                    Input passenger id and amount
+                           Else,
+                                go back to admin login
+         Else,
+              calculate=AMT IN ACC-FARE  
+              confirm transaction
+              print receipt
+End                 
