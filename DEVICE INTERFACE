@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+        }
+
+
+        private void button_click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            textBox_Result.Text = textBox_Result.Text + button.Text;
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Login open = new Login();
+            open.Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Login open = new Login();
+            open.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int fare = 10;
+            float subfar = 5;
+            float total;
+            if (comboBox1.Text == "SDA") 
+            {
+                total = fare - subfar;
+                MessageBox.Show("your fare is\t"+total);
+            }
+            int newfare = 20;
+            float exfare = 10;
+            float sum;
+            if (comboBox1.Text == "Assemblies")
+            {
+                sum = newfare - exfare;
+                MessageBox.Show("your fare is\t" + sum);
+            }
+            int nfare = 20;
+            float exfar = 10;
+            float tota;
+            if (comboBox1.Text == "Ritz First")
+            {
+                tota = nfare - exfar;
+                MessageBox.Show("your fare is\t" + tota);
+            }
+     
