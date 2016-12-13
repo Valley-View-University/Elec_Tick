@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Load : Form
+    {
+        string textBox1_Focused, textBox2_Focused;
+        public Load()
+        {
+            InitializeComponent();
+        }
+
+        private void Load_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_click(object sender, EventArgs e)
+        {
+            if (textBox1_Focused == "yes")
+            {
+                Button bu = (Button)sender;
+                textBox1_Result.Text = textBox1_Result.Text + bu.Text;                
+            }
+            else if (textBox2_Focused == "yes")
+            {
+                Button button = (Button)sender;
+                textBox2_Rult.Text = textBox2_Rult.Text + button.Text;
+            }
+        }
+        
+        private void txtAccNo_Click(object sender, EventArgs e)
+        {
+            textBox1_Focused = "yes";
+            textBox2_Focused = "no";
+        }
+
+        private void txtAmount_Click(object sender, EventArgs e)
+        {
+            textBox1_Focused = "no";
+            textBox2_Focused = "yes";
+        }
+
+        private void txtAmount_Click()
+        {
+            MessageBox.Show("");
+            textBox2_Rult.Focus();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form1 open = new Form1();
+            open.Show();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+    }
+}
