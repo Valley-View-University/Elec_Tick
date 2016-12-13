@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[Bus] (
+    [bu_id]     VARCHAR (12) NOT NULL PRIMARY KEY,
+    [driver_id] VARCHAR (12) NOT NULL,
+    [cond_id]   VARCHAR (12) NOT NULL,
+    [dest_from] VARCHAR (50) NOT NULL,
+    [dest_to]   VARCHAR (50) NOT NULL,
+    
+);
