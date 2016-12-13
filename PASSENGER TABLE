@@ -1,0 +1,5 @@
+CREATE TABLE [dbo].[Passenger] (
+    [id]      INT NOT NULL,
+    [account] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([id] ASC)
+);
