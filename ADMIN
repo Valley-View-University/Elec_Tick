@@ -1,0 +1,6 @@
+CREATE TABLE [dbo].[Admin] (
+    [admin_Id]  INT          NOT NULL PRIMARY KEY,
+    [name]      TEXT         NOT NULL,
+    [password]  VARCHAR (50) NOT NULL,
+    [phone_num] NCHAR (10)   NOT NULL,
+);
