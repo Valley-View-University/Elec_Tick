@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {  // ComboBox
             int fare = 10;
             float subfar = 5;
             float total;
