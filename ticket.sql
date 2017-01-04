@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `reserve` (
   `transactionnum` varchar(10) NOT NULL,
   `seat` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7;
 
 --
 -- Dumping data for table `reserve`
