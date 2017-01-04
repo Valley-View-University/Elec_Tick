@@ -3,6 +3,7 @@ Start
          If you want to load
               Admin login
               Input id and password
+                     check for id and password
                         If id and password are valid
                     Input passenger id and amount
                            Else,
