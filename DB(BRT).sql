@@ -1,4 +1,4 @@
-﻿create table Bus( //creating table
+create table Bus( //creating table
 bu_id varchar(12) NOT NULL PRIMARY KEY,
 driver_id varchar(12) NOT NULL,
 cond_id varchar(12) NOT NULL,
