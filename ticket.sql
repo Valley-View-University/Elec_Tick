@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `password` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
+// the auto increment   //
 --
 -- Dumping data for table `admin`
 --
